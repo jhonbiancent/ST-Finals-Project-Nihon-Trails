@@ -1,4 +1,7 @@
 @import '~maplibre-gl/dist/maplibre-gl.css';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .mainContainer{
     background-color: black;
     width:100%;
@@ -89,7 +92,7 @@
     width:1%;
     height:1%;
     border-radius: 50%;
-    border: solid 1px white;
+    border: solid 3px white;
     animation: detectionAnimation 4s infinite linear;
 }
 .detectionLines:nth-child(1) {
@@ -166,14 +169,14 @@
 }
 .categoryButtons{
     height:25px;    
-    width:25%;
+    width:27%;
     border-radius:10px;
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2%;
-    font-size:7px;
+    font-size:8px;
     padding:2%;
     transition: ease 0.1s;
 }
@@ -203,6 +206,9 @@
     height:15px;
     border-radius: 10px;
 }
+.placesName{
+    font-size:  15px;
+}
 /*-------------------------icon toggle clicked-------------------*/
 .cameraIconClicked{
     background-color: rgb(169, 255, 206);
@@ -228,3 +234,86 @@
     background-color: rgb(169, 255, 206);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
 }
+/*-------------------------------carousel  -----------------*/
+
+
+.fetchImageButton {
+   margin-right: auto;
+    width:30%;
+    height:90%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fetchImageButton2{
+    margin-right: auto;
+    width: 30%;
+    height: 90%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fetchImageButton:hover {
+    background-color: #45a049;
+}
+
+.carouselContainer {
+    border-radius:15px;
+    width:95%;
+    height:200px;   
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.imageContainer {
+    width: 90%;
+    height:90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselImage {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+.carouselImage:hover{
+    transition: ease-in-out 1s;
+    transform: scale(1.05);
+}
+
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+/* .prevButton:hover,
+.nextButton:hover {
+  
+} */

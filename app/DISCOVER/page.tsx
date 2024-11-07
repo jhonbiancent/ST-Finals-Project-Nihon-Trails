@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../navbar';
 import Style from "./discoverPage.module.css";
+import Style2 from "./fetchImagesStyle.module.css";
 import MyMap from "./geoapifyMap";
 import fetchPlaces from './fetchPlaces'; // Import the fetchPlaces function
 import FetchImages from './fetchImages'; // Import the fetchPlaces function
@@ -13,13 +14,15 @@ const DiscoverPage: React.FC = () => {
   const [places, setPlaces] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const [placeName, setPlaceName] = useState<string | null>(null); // State to hold the selected place name
+
 
   // Default parameters for fetchPlaces
-  const placeCategories = "natural";
+  const placeCategories = "tourism";
   const language = "en";
   const proximitySearch = 30000;  
   const limitOfRequestedPlaces = 30;
-
+  var placeIndex = 1;
   // Function to handle center change from the map
   const handleCenterChange = (lng: number, lat: number) => {
     setCoordinates({ lng, lat });
@@ -46,6 +49,7 @@ const DiscoverPage: React.FC = () => {
     }
     setLoading(false);
   };
+
 
   // Effect to fetch places when the component mounts
   useEffect(() => {
@@ -95,20 +99,25 @@ const DiscoverPage: React.FC = () => {
                   <div>Loading...</div>
                 ) : (
                   <>
-                    <h1>
+                  <section className={Style2.resultsSectionContainer}>
                       {places.map((place, index) => (
                         place.properties.name && (
-                          <p key={index}>
-                            {place.properties.name} - {place.properties.address_line1}
-                          </p>
+                          <div className={Style2.resultsImagesContainer} key={index}>
+                            <p className={Style.placesName}>{placeIndex++}. {place.properties.address_line1}</p> 
+                            <div>
+                              {/* Add a button to trigger fetching of images */}
+                              <FetchImages placeName={place.properties.name}/>
+                              <button className={Style.fetchImageButton} onClick={() => setPlaceName(place.properties.name)}>
+                                {/* Fetch Images for {place.properties.name} */}
+                                See more
+                              </button>
+                              </div>
+                          </div>  
                         )
                       ))}
-                    </h1>
+                   </section>
+        
                   </>)}
-                
-                <div >
-                  <FetchImages/>
-                </div>
               </section>
             </div>
           </section>

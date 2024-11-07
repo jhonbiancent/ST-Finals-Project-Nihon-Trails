@@ -7,7 +7,7 @@ const fetchPlaces = async (
   proximitySearch: number,
   limitOfRequestedPlaces: number
 ) => {
-  const requestOptions = {
+  const requestOptions = {  
     method: 'GET',
   };
 
