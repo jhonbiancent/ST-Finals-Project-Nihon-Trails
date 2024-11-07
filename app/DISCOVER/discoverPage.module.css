@@ -175,10 +175,10 @@
     gap: 2%;
     font-size:7px;
     padding:2%;
-    transition: ease-in 0.1s;
+    transition: ease 0.1s;
 }
 .categoryButtons:hover{
-    background-color: white;
+    transform:scale(1.005);
     cursor:pointer;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
 }
@@ -202,4 +202,29 @@
     border:solid 1px black;
     height:15px;
     border-radius: 10px;
+}
+/*-------------------------icon toggle clicked-------------------*/
+.cameraIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.mountainIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.shrineIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.hotelIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.naturalParkIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.transportIconClicked{
+    background-color: rgb(169, 255, 206);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
 }

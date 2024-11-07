@@ -1,23 +1,27 @@
 import React, { useState } from "react";
 import Style from "./discoverPage.module.css";
-const fetchImages: React.FC = () => {
+
+const FetchImages: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
-const imageToBeFetched = "mt. everest"
+  // Specify the term to search for
+  const imageToBeFetched = "Mt. Fuji";
+
+  // Function to fetch the image
   const fetchImage = async () => {
     const requestOptions = {
-      method: "鎌田山",
-      redirect: "follow" as RequestRedirect, // Ensure the correct type
+      method: "GET",
+      redirect: "follow" as RequestRedirect, // Specify the type for TypeScript
     };
 
     try {
       const response = await fetch(
-        `https://google.serper.dev/search?q=${imageToBeFetched}&apiKey=a0d7e8830f060ac862c5bd538dc0da8be5a205ac`,
+        `https://google.serper.dev/search?q=${encodeURIComponent(imageToBeFetched)}&apiKey=a0d7e8830f060ac862c5bd538dc0da8be5a205ac`,
         requestOptions
       );
-      const data = await response.json(); // Assuming the response is JSON
+      const data = await response.json(); // Parse the response as JSON
 
-      // Check if the response contains images in the knowledgeGraph object
+      // Check if the response contains the image in the knowledgeGraph object
       const image = data.knowledgeGraph?.imageUrl;
 
       if (image) {
@@ -39,4 +43,4 @@ const imageToBeFetched = "mt. everest"
   );
 };
 
-export default fetchImages;
+export default FetchImages;
