@@ -9,15 +9,17 @@ export default function discoverPageScript() {
         const mountainIcon = document.getElementById('mountainIcon');
         const shrineIcon = document.getElementById('shrineIcon');
         const hotelIcon = document.getElementById('hotelIcon');
-        const naturalParkIcon = document.getElementById('naturalParkIcon');
+        const naturalParkIcon = document.getElementById('naturalParkIcon'); 
         const transportIcon = document.getElementById('transportIcon');
     
+  
         var cameraClicked = false; 
         var mountainClicked = false; 
         var shrineClicked = false; 
         var hotelClicked = false; 
         var naturalParkClicked = false; 
         var transportClicked = false; 
+        
 
         cameraIcon.onclick = function () {
             cameraClicked = !cameraClicked;
@@ -72,8 +74,12 @@ export default function discoverPageScript() {
                 transportIcon.classList.remove(Style.transportIconClicked);
             }
         };
+
     })
 
+
+  
+    
     return (
         <div></div>
   );

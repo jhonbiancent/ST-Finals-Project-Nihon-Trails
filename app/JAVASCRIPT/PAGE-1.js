@@ -15,7 +15,7 @@ export default function FirstPageJavascript() {
         
     const toggleButtonDarkMode = document.getElementById('nightmodeContainer');
     const shootingStarContainer = document.getElementById('shootingStarContainer');
-    const cloudsContainer = document.getElementById('cloudsContainer');    
+        const cloudsContainer = document.getElementById('cloudsContainer'); 
         
     const clouds1 = document.getElementById('clouds1');  
     const clouds2 = document.getElementById('clouds2');
