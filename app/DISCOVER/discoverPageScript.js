@@ -12,7 +12,10 @@ export default function discoverPageScript() {
         const naturalParkIcon = document.getElementById('naturalParkIcon'); 
         const transportIcon = document.getElementById('transportIcon');
     
-  
+
+        const CloseButtonExpandedSection = document.getElementById('closeButtonExpandedSection');
+        const expandedResultsContainer = document.getElementById('expandedResultsContainer');
+
         var cameraClicked = false; 
         var mountainClicked = false; 
         var shrineClicked = false; 
@@ -20,6 +23,11 @@ export default function discoverPageScript() {
         var naturalParkClicked = false; 
         var transportClicked = false; 
         
+        function CloseExpandedSection() {
+             expandedResultsContainer.style.display = 'none';
+        }
+        
+
 
         cameraIcon.onclick = function () {
             cameraClicked = !cameraClicked;
@@ -85,3 +93,20 @@ export default function discoverPageScript() {
   );
 
 }
+export const showModal = () => {
+        const confirmationModalMainContainer = document.getElementById('confirmationModalMainContainer');
+    confirmationModalMainContainer.style.display = 'flex';
+    console.log('showModal');
+        }
+        export const closeModal = ()=> {
+        confirmationModalMainContainer.style.display = 'none';
+        }
+
+        export const CloseExpandedSection =()=> {
+          const expandedResultsContainer = document.getElementById('expandedResultsContainer');
+             expandedResultsContainer.style.display = 'none';
+        }
+           export const openReadmoreSection =()=> {
+          const expandedResultsContainer = document.getElementById('expandedResultsContainer');
+             expandedResultsContainer.style.display = 'flex';
+        }

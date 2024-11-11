@@ -7,17 +7,25 @@ import MyMap from "./geoapifyMap";
 import fetchPlaces from './fetchPlaces'; 
 import FetchImages from './fetchImages'; 
 import DiscoverPageScript from './discoverPageScript'; 
+import { closeModal } from './discoverPageScript';
+import { CloseExpandedSection } from './discoverPageScript';
 
 
-const DiscoverPage: React.FC = () => {
+
+ interface FetchDataFromImagesPage {
+    placeNameEnglish: string;
+    imageUrls: String[];
+  }
+const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imageUrls}) => {
   const [coordinates, setCoordinates] = useState<{ lng: number; lat: number }>({ lng: 0, lat: 0 });
   const [places, setPlaces] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [placeName, setPlaceName] = useState<string | null>(null);
   const [requestImageBool, setRequestImageBool] = useState<boolean | false>(false);
- const [placeCategories, setPlaceCategories] = useState<string>("tourism");
+  const [placeCategories, setPlaceCategories] = useState<string>("tourism");
 
+  const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
 
 
   const language = "en";
@@ -64,6 +72,24 @@ const DiscoverPage: React.FC = () => {
     <body>
         <DiscoverPageScript/>
       <main>
+
+        <section className={Style2.expandedResultsContainer} id="expandedResultsContainer">
+          <section className={Style2.expandedResultsSubContainer}>
+            <h1>{placeNameEnglish}</h1>
+              <button className={Style2.CloseButtonExpandedSection} id="CloseButtonExpandedSection" onClick={CloseExpandedSection}>Close</button>
+          </section>
+          <h2 className={Style.placesName}></h2>
+        </section>
+
+        <section className={Style2.modalMainContainer} id="confirmationModalMainContainer">
+          <div className={Style2.modalSucccessful} id="confirmationModal">
+          <p>Successfully added to Buckelist!</p>
+            <button id="closeButton" className={Style2.closeButton}
+            onClick={closeModal}
+            >Close</button>
+          </div>
+        </section>
+
         <NavBar />
         <div className={Style.mainContainer}>
           <section className={Style.contentContainer}>

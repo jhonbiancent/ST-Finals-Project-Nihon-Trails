@@ -16,7 +16,6 @@ const fetchPlaces = async (
       `https://api.geoapify.com/v2/places?categories=${placeCategories}&filter=circle:${lng},${lat},${proximitySearch}&bias=proximity:${lng},${lat}&limit=${limitOfRequestedPlaces}&lang=${language}&apiKey=c2f9e314313147fb973f918570b0bf3b`,
       requestOptions
     );
-
     if (!response.ok) {
       console.log('Failed to fetch data');
       return { error: 'Failed to fetch data' };

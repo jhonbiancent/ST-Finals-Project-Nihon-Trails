@@ -1,7 +1,10 @@
-  import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect } from "react";
   import Style from "./discoverPage.module.css";
   import Style2 from "./fetchImagesStyle.module.css";
   import DiscoverPageScript from './discoverPageScript'; 
+  import { showModal } from "./discoverPageScript";
+  import { openReadmoreSection } from "./discoverPageScript";
 
   interface FetchImagesProps {
     placeName: string; // Accept placeName as a prop
@@ -53,6 +56,8 @@
 
     const prevImage = () => {
       if (currentIndex > 0) {
+
+
         setCurrentIndex(currentIndex - 1);
       }
 
@@ -61,13 +66,7 @@
     return (
       <div className={Style2.resultsContainer}>
         <DiscoverPageScript />
-        <dialog className={Style2.modalSucccessful} id="confirmationModal">
-          <p>Successfully added to Buckelist!</p>
-          <button id="okButton">Close</button>
-        </dialog>
-
-        
-   
+  
           {placeName.length > 0 ? (
           <div className={Style2.resultSubContainer}>
           <div className={Style.carouselContainer}>
@@ -109,12 +108,16 @@
        
           
         <div className={Style2.seeMoreContainer}>
+
           <button className={Style2.addToBucketlistButton}
+            
             id="addedToBucketlistButton"
             onClick={() => {
               setBucketlist(placeNameEnglish);
               console.log(placeNameEnglish);
+              showModal; 
             }
+            
           }
           > 
             {/* <img src="ICONS/ICON-ADD.svg" className={Style2.buttonIcons}/> */}
@@ -124,7 +127,7 @@
              <img className={Style2.buttonIcons} src="ICONS/pinpoint.svg"/>
             Pinpoint
           </button>
-          <button className={Style2.addToBucketlistButton}>
+          <button className={Style2.addToBucketlistButton} onClick={openReadmoreSection}>
               <img className={Style2.buttonIcons} src="ICONS/ICON-SEE-MORE.svg"/>
               Read More
           </button>

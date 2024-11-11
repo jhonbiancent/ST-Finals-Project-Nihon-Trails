@@ -22,7 +22,6 @@ export default function FirstPageJavascript() {
     const clouds3 = document.getElementById('clouds3');
     const clouds4 = document.getElementById('clouds4');
         
-    const music = new Audio("/ASSETS/sparkle.mp3");
     const toggle = document.getElementById('toggleButton');
 
     const handleScroll = () => {
@@ -55,12 +54,10 @@ export default function FirstPageJavascript() {
             if (shootingStarOpacity == true) {
                 shootingStarContainer.classList.remove(loginStyle.shootingStarContainerAppear);
                 cloudsContainer.classList.remove(loginStyle.cloudsContainerDisappear);
-                music.pause();
 
             } else {
                 shootingStarContainer.classList.add(loginStyle.shootingStarContainerAppear);
                 cloudsContainer.classList.add(loginStyle.cloudsContainerDisappear);
-                music.play();
             }
         }
 
