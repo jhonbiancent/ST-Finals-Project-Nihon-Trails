@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import maplibre from 'maplibre-gl';
 import style from './discoverPage.module.css';
+import { setDefaultAutoSelectFamily } from 'net';
 
 // Define the props interface for GeoapifyMap
 interface GeoapifyMapProps {
@@ -27,7 +28,7 @@ const GeoapifyMap: React.FC<GeoapifyMapProps> = ({ onCenterChange }) => {
       zoom: initialState.zoom
     });
 
-    setMap(map); // Set the map instance in state
+    setMap(map); // Set the map instance in states
 
     // Cleanup function to remove the map instance on unmount
     return () => {
@@ -48,6 +49,8 @@ const GeoapifyMap: React.FC<GeoapifyMapProps> = ({ onCenterChange }) => {
     <div className={style.apiMapContainer}>
       <div className={style.map} id="map-container" ref={mapContainerRef} />
       <button onClick={handleGetCenter} className={style.button}>View Places</button>
+    
+   
     </div>
   );
 };

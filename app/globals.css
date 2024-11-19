@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-@font-face{
+@font-face {
   font-family: Poppins;
   src: url(/FONTS/Poppins-SemiBold.ttf);
 }
@@ -25,14 +24,14 @@
 }  */
 
 body {
-  font-family:Poppins;
+  font-family: Poppins;
   color: var(--foreground);
   letter-spacing: 0.08rem;
   /* background: var(--background); */
-  overflow-x:hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth scroll;
 }
-main{
+main {
   margin: 0;
   padding: 0;
   display: flex;
@@ -41,44 +40,60 @@ main{
   flex-direction: column;
   position: relative;
 }
-h1{
-  display:block;
-  background-color:white;
+h1 {
+  display: block;
+  background-color: white;
 }
-p{
-  display:block;
+h4 {
+  font-size: 30px;
+}
+h5 {
+  bottom: 0%;
+  position: absolute;
+  font-size: large;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+}
+h6 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 25px;
+}
+p {
+  display: block;
 }
 /*------------------toggle nightmode-------------*/
-#nightmodeContainer{
+#nightmodeContainer {
   position: relative;
-  display:flex;
+  display: flex;
   align-items: center;
-  background-color:rgb(92, 141, 128);
-  width:11%;
-  height:55%;
-  padding:0.6%;
-  border-radius:20px;
+  background-color: rgb(92, 141, 128);
+  width: 11%;
+  height: 55%;
+  padding: 0.6%;
+  border-radius: 20px;
   transition: ease-in 0.2s;
 }
-#nightmodeContainer:hover{
+#nightmodeContainer:hover {
   cursor: pointer;
 }
 
 /*------------------PARALLAX LAYERS-------------*/
-#foregroundTree{
-    top:10%;
-    left:0;
-    width:100%;
-    position: absolute;
-    z-index: 10;
+#foregroundTree {
+  top: 10%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
 }
 #foregroundTower {
-  top:10%;
+  top: 10%;
   position: absolute;
   z-index: 10;
 }
 #parallaxLayer1 {
-  margin-top:20%;
+  margin-top: 20%;
   position: absolute;
   z-index: 9;
 }
@@ -100,9 +115,9 @@ p{
   position: absolute;
   z-index: 1;
 }
-#moon{
-  position:absolute;
-  z-index:2;
+#moon {
+  position: absolute;
+  z-index: 2;
 }
 /* ::-webkit-scrollbar{
   width:1rem;s
@@ -120,4 +135,3 @@ p{
   background: rgb(68, 139, 125);
   cursor:pointer;
 } */
-

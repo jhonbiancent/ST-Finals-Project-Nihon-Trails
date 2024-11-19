@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../navbar';
 import Style from "./discoverPage.module.css";
 import Style2 from "./fetchImagesStyle.module.css";
-import MyMap from "./geoapifyMap";
+import MyMap from "./geoapifyMap";  
 import fetchPlaces from './fetchPlaces'; 
 import FetchImages from './fetchImages'; 
 import DiscoverPageScript from './discoverPageScript'; 
 import { closeModal } from './discoverPageScript';
 import { CloseExpandedSection } from './discoverPageScript';
+import Content from '../CONTENT/Content';
 
 
 
@@ -16,7 +17,7 @@ import { CloseExpandedSection } from './discoverPageScript';
     placeNameEnglish: string;
     imageUrls: String[];
   }
-const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imageUrls}) => {
+  const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imageUrls}) => {
   const [coordinates, setCoordinates] = useState<{ lng: number; lat: number }>({ lng: 0, lat: 0 });
   const [places, setPlaces] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -24,6 +25,7 @@ const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imag
   const [placeName, setPlaceName] = useState<string | null>(null);
   const [requestImageBool, setRequestImageBool] = useState<boolean | false>(false);
   const [placeCategories, setPlaceCategories] = useState<string>("tourism");
+  
 
   const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
 
@@ -58,9 +60,8 @@ const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imag
       setPlaces(data || []);
     }
     setLoading(false);
-  };
-
-
+    };
+    
 
   useEffect(() => {
     getPlaces(coordinates.lng, coordinates.lat);
@@ -96,7 +97,8 @@ const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imag
             <div className={Style.mapContainer}>
               <MyMap onCenterChange={handleCenterChange} />
               <div className={Style.detectionContainer}>
-                <span className={Style.detectionCenter}></span>
+                <img src="/ICONS/ICON-PINPOINT.svg"/>
+                {/* <span className={Style.detectionCenter}></span> */}
                 <span className={Style.detectionLines}></span>
                 <span className={Style.detectionLines}></span>
               </div>
@@ -118,9 +120,13 @@ const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imag
                 </section>
               </form>
               <section className={Style.resultsContainer}>
-                <p>Longitude: {coordinates.lng}</p> 
-                <p>Latitude: {coordinates.lat}</p>
-                <h1 className={Style.placeTitle}>Places</h1>
+        
+                  <p>Current Location:</p>
+                  <p>Longitude: {coordinates.lng}</p> 
+                  <p>Latitude: {coordinates.lat}</p>
+       
+              
+
 
                 {loading ? (
                 <section className={Style.loadingContainerFetchingPlaces}>
@@ -161,6 +167,7 @@ const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imag
             </div>
           </section>
         </div>
+        <Content/>
       </main>
     </body>
   );

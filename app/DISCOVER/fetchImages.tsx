@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
   import Style from "./discoverPage.module.css";
   import Style2 from "./fetchImagesStyle.module.css";
   import DiscoverPageScript from './discoverPageScript'; 
   import { showModal } from "./discoverPageScript";
-  import { openReadmoreSection } from "./discoverPageScript";
+import { openReadmoreSection } from "./discoverPageScript";
 
   interface FetchImagesProps {
     placeName: string; // Accept placeName as a prop
@@ -110,21 +110,19 @@ import React, { useState, useEffect } from "react";
         <div className={Style2.seeMoreContainer}>
 
           <button className={Style2.addToBucketlistButton}
-            
             id="addedToBucketlistButton"
-            onClick={() => {
-              setBucketlist(placeNameEnglish);
-              console.log(placeNameEnglish);
-              showModal; 
-            }
-            
-          }
+          onClick={showModal}
+            // onClick={() => {
+            //   setBucketlist(placeNameEnglish);
+            //   console.log(placeNameEnglish);
+            // }       
+          // }
           > 
             {/* <img src="ICONS/ICON-ADD.svg" className={Style2.buttonIcons}/> */}
             Add to Bucketlist
           </button>
           <button className={Style2.addToBucketlistButton}>
-             <img className={Style2.buttonIcons} src="ICONS/pinpoint.svg"/>
+             <img className={Style2.buttonIcons} src="ICONS/ICON-PINPOINT.svg"/>
             Pinpoint
           </button>
           <button className={Style2.addToBucketlistButton} onClick={openReadmoreSection}>

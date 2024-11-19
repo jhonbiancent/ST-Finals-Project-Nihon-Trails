@@ -5,10 +5,10 @@ const navbar = () => {
   return (
      <div className={loginStyle.navigationContainer}>
               <Link href={"./Home"} ><img src="/ASSETS/WEBSITE-TITLE.png" className={loginStyle.websiteTitle}/></Link>
-          <nav className={loginStyle.navigationBar}>
+      <nav className={loginStyle.navigationBar}>
+                <Link href={"../page.tsx"} className={loginStyle.navLinks}>Home</Link>
                 <Link href={"/DISCOVER"} className={loginStyle.navLinks}>Discover</Link>
                 <Link href="/users" className={loginStyle.navLinks}>Bucketlist</Link>
-                <a className={loginStyle.navLinks} href="#">Users</a>
             <div id="nightmodeContainer">
               <img src="/ASSETS/ICONS-SUN.png" className={loginStyle.iconsSun} />
                   <div className={loginStyle.toggleCircle} id="toggleButton">

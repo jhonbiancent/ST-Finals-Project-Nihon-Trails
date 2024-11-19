@@ -23,21 +23,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:10%;
+    gap:3%;
     height:30px;
     width:27%;
        margin-right: auto;
-        /* width: 30%;
-        height: 70%; */
         background-color: rgb(139, 223, 188);
         box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
         color: black;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
         transition:0.2s ease-in-out;
 }
 .addToBucketlistButton:hover{
+    cursor: pointer;
     background-color: lightblue;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
 } 
@@ -127,6 +125,7 @@
 }
 /*--------------------expandedSeemore-----------------*/
 .expandedResultsContainer{
+    top:0%;
     position:absolute;
     display:none;
     flex-direction: column;
@@ -142,7 +141,7 @@
     align-items: end;
     justify-content: end;
     padding:2%;
-    height: 9vh;
+    height: 90vh;
     width: 80%;
     background-color: rgb(255, 255, 255);
 }
