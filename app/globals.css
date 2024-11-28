@@ -46,6 +46,8 @@ h1 {
 }
 h4 {
   font-size: 30px;
+  margin-left: 5%;
+  color: white;
 }
 h5 {
   bottom: 0%;
@@ -59,6 +61,8 @@ h6 {
   top: 20%;
   left: 10%;
   font-size: 25px;
+  transform: translateX(-5%);
+  opacity: 0;
 }
 p {
   display: block;

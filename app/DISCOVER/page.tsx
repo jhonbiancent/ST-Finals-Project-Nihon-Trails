@@ -12,7 +12,6 @@ import { CloseExpandedSection } from './discoverPageScript';
 import Content from '../CONTENT/Content';
 
 
-
  interface FetchDataFromImagesPage {
     placeNameEnglish: string;
     imageUrls: String[];
@@ -25,11 +24,7 @@ import Content from '../CONTENT/Content';
   const [placeName, setPlaceName] = useState<string | null>(null);
   const [requestImageBool, setRequestImageBool] = useState<boolean | false>(false);
   const [placeCategories, setPlaceCategories] = useState<string>("tourism");
-  
-
   const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
-
-
   const language = "en";
   const proximitySearch = 30000;  
   const limitOfRequestedPlaces = 30;
@@ -62,7 +57,6 @@ import Content from '../CONTENT/Content';
     setLoading(false);
     };
     
-
   useEffect(() => {
     getPlaces(coordinates.lng, coordinates.lat);
   }, []);
@@ -76,7 +70,7 @@ import Content from '../CONTENT/Content';
 
         <section className={Style2.expandedResultsContainer} id="expandedResultsContainer">
           <section className={Style2.expandedResultsSubContainer}>
-            <h1>{placeNameEnglish}</h1>
+            <h2>{placeNameEnglish}</h2>
               <button className={Style2.CloseButtonExpandedSection} id="CloseButtonExpandedSection" onClick={CloseExpandedSection}>Close</button>
           </section>
           <h2 className={Style.placesName}></h2>

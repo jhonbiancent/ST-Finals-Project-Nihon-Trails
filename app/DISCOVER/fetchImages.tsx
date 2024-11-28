@@ -6,6 +6,7 @@ import React, { useState } from "react";
   import { showModal } from "./discoverPageScript";
 import { openReadmoreSection } from "./discoverPageScript";
 
+
   interface FetchImagesProps {
     placeName: string; // Accept placeName as a prop
     placeNameEnglish: string;
@@ -17,7 +18,6 @@ import { openReadmoreSection } from "./discoverPageScript";
     const [loading, setLoading] = useState<boolean | null>(null);
 
     var imageToBeFetched = placeName;
-
     const fetchImage = async () => {
        setLoading(true);
       const requestOptions = {
@@ -125,9 +125,9 @@ import { openReadmoreSection } from "./discoverPageScript";
              <img className={Style2.buttonIcons} src="ICONS/ICON-PINPOINT.svg"/>
             Pinpoint
           </button>
-          <button className={Style2.addToBucketlistButton} onClick={openReadmoreSection}>
-              <img className={Style2.buttonIcons} src="ICONS/ICON-SEE-MORE.svg"/>
-              Read More
+          <button className={Style2.addToBucketlistButton}>
+            <img className={Style2.buttonIcons} src="ICONS/ICON-SEE-MORE.svg" />
+            Read More      
           </button>
         </div>
       </div>
