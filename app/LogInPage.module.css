@@ -2,19 +2,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: linear-gradient(
-    to bottom right,
-    white,
-    white,
-    rgba(255, 192, 203, 0.771),
-    pink
-  );
   height: 100vh;
   width: 100%;
   z-index: -1;
 }
 .navigationContainer {
-  background-color: rgb(139, 223, 188);
   color: white;
   position: absolute;
   display: flex;

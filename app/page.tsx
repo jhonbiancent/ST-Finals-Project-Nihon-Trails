@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import ProductCard from "./components/ProductCard";
 import loginStyle from "./LogInPage.module.css";
-import FirstPageJavascript from './JAVASCRIPT/PAGE-1.js';
+import LandingPage from "./LANDING/landing";
 import NavBar from './navbar';
 
 export default function Home() {
   return (
     <body>
-      <FirstPageJavascript/>
       <main>
           <div className = {loginStyle.background}></div>
-          <NavBar/>
-        <section className={loginStyle.parallaxContainer} >
+        <NavBar />
+        <LandingPage/>
+
+
+
+
+
+        {/* <section className={loginStyle.parallaxContainer} >
 
           <img src="/ASSETS/FOREGROUND-TREE.png" id="foregroundTree"/>
           <img src="/ASSETS/FOREGROUND-TOWER.png" id="foregroundTower" />        
@@ -37,7 +41,7 @@ export default function Home() {
             <img className={loginStyle.clouds} id="clouds4" src="/ASSETS/CLOUD-4.png" />
           </section>
 
-        </section>   
+        </section>    */}
       </main>
     </body>
 
