@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import NavBar from '../navbar';
+import NavBar from './navbar';
 import Style from "./discoverPage.module.css";
 import Style2 from "./fetchImagesStyle.module.css";
 import MyMap from "./geoapifyMap";  

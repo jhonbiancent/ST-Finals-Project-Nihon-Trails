@@ -4,11 +4,11 @@ import Link from "next/link";
 const navbar = () => {
   return (
      <div className={loginStyle.navigationContainer}>
-              <Link href={"./Home"} ><img src="/ASSETS/WEBSITE-TITLE.png" className={loginStyle.websiteTitle}/></Link>
+              <Link href={"./"} ><img src="/LANDINGPAGEASSETS/favicon.png" className={loginStyle.websiteTitle}/></Link>
       <nav className={loginStyle.navigationBar}>
-                <Link href={"../page.tsx"} className={loginStyle.navLinks}>Home</Link>
+                <Link href={"./"} className={loginStyle.navLinks}>Home</Link>
                 <Link href={"/DISCOVER"} className={loginStyle.navLinks}>Discover</Link>
-                <Link href="/users" className={loginStyle.navLinks}>Bucketlist</Link>
+                <Link href="./" className={loginStyle.navLinks}>Bucketlist</Link> 
              </nav>
     </div>
   )

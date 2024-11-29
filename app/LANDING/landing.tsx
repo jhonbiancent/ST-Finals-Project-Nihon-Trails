@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './landingstyle.module.css';
 import Script from './landingjavascript.js';
+import style2 from './secondlandingstyle.module.css';
+import Footer from '../footer';
 const landing = () => {
   return (
     <div className={style.main}>
@@ -67,11 +69,11 @@ const landing = () => {
         
         <div className={style.recommendedcontainer}>
           <div className={style.recommendedRow}>
-            <span className={style.rowImageContainer}><img src="/LANDINGPAGEASSETS/KINKAKU-JI.jpg" />
+            <span className={style.rowImageContainer} id="show1"><img src="/LANDINGPAGEASSETS/KINKAKU-JI.jpg" />
               <p className={style.placeName}>KINKAKU-JI TEMPLE</p>
               <p className={style.placeLocation}>Kita Ward, Kyoto</p>
             </span>
-            <div className={style.column1}>
+            <div className={style.column1} id="show2">
               <span className={style.columnImage}> <img src="/LANDINGPAGEASSETS/OKAZAKI.jpg" />
                <p className={style.placeName}>OKAZAKI PARK</p>
                 <p className={style.placeLocation}>Kita Ward, Kyoto</p>
@@ -81,7 +83,7 @@ const landing = () => {
                 <p className={style.placeLocation}>Kitakyushu, Fukouka</p>
               </span>
             </div>
-            <div className={style.column2}>
+            <div className={style.column2} id="show3">
               <span className={style.columnImage}> <img src="/LANDINGPAGEASSETS/SHINSEKAI.jpg" />
                <p className={style.placeName}>SHINSEKAI</p>
                 <p className={style.placeLocation}>Shinsekai, Osaka</p>
@@ -93,8 +95,8 @@ const landing = () => {
             </div>
           </div>
 
-           <div className={style.recommendedRow}>
-                   <div className={style.column1}>
+            <div className={style.recommendedRow}>
+                   <div className={style.column1} id="show6">
               <span className={style.columnImage}> <img src="/LANDINGPAGEASSETS/KORIN TEMPLE.jpg" />
               <p className={style.placeName}>KASUGA TAISHA</p>
                 <p className={style.placeLocation}>Kasuga, Nara</p>
@@ -104,7 +106,7 @@ const landing = () => {
                 <p className={style.placeLocation}>Torii, Kyoto</p>
               </span>
             </div>
-            <div className={style.column2}>
+            <div className={style.column2} id="show5">
               <span className={style.columnImage}> <img src="/LANDINGPAGEASSETS/NAHAGOTO.jpg" />
                <p className={style.placeName}>SHINMACHI DORI</p>
                 <p className={style.placeLocation}>Kanazawa, Nara</p> 
@@ -114,13 +116,117 @@ const landing = () => {
                 <p className={style.placeLocation}>Hoshinoya, Kyoto</p>
               </span>
             </div>
-            <span className={style.rowImageContainer}><img src="/LANDINGPAGEASSETS/KINKAKUJI TEMPLE.jpg" />
+            <span className={style.rowImageContainer} id="show4"><img src="/LANDINGPAGEASSETS/KINKAKUJI TEMPLE.jpg" />
              <p className={style.placeName}>KINKAKU-JI TEMPLE</p>
                 <p className={style.placeLocation}>Kita-ku, Kyoto</p>
             </span>
           </div>
         </div>
-       </div>
+      </div>
+
+      <div className={style2.recommendedJapan}>
+      
+        <p className={style2.recommendedHeader}>Smooth your way with a little forward planning</p>
+        <p className={style2.firstParagraph}>
+          It is easy to feel a little overwhelmed and disoriented when you visit Japan<br/>
+          for the first time, so find out the basics before you fly and get acquainted with<br/>
+          the country through our helping you plan guide.<br/>
+        </p>
+        <p className={style2.secondParagraph}>
+          Learn a little more about Japan's customs, culture and Wi-Fi connectivity, as<br/>
+          well as its seasonal weather, geography and luggage delivery options. Many<br/>
+          of the questions first-time travelers might have are answered here, along<br/>
+          with insider tips and practical advice to help you navigate the country with<br/>
+          confidence.
+        </p>
+      </div>
+
+
+      <div className={style2.aboutJapan}>
+        <div className={style2.aboutRow}>
+
+        <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/LANGUAGE.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>LANGUAGE</p>
+            <p>Japan's official language is Japanese, but <br/>
+              English is generally understood in major cities<br/>
+              and designated tourist sites.
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+          </div>
+          </div>
+
+               <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/WIFI.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>TIMEZONE</p>
+              <p>All of Japan sits within the same time zone, and<br/>
+                no daylight saving is practiced. The country is<br/>
+                nine hours ahead of GMT.
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+          </div>
+          </div>
+
+        </div>
+        
+   
+        <div className={style2.aboutRow}>
+
+          <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/TIMEZONE.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>WIFI & CONNECTIVITY</p>
+              <p>Wireless hotspots are popping up all over major<br/>
+                cities in Japan, so you should never be too far<br/>
+                from a Wi-Fi connection.
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+          </div>
+          </div>
+
+          <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/PLUGS.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>PLUGS & ELECTRICITY</p>
+              <p>Japan uses two flat parallel prong plugs. For<br/>
+                guaranteed charging of your electrical<br/>
+                necessities, purchase a plug adapter<br/>
+                beforehand.
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+          </div>
+          </div>
+
+        </div>
+            <div className={style2.aboutRow}>
+                               <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/CURRENCY.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>CURRENCY</p>
+              <p>The Japanese yen is used throughout the<br/>
+                country and you can exchange foreign currency<br/>
+                at the airports and most major banks
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+          </div>
+          </div>
+
+          <div className={style2.aboutColumn}>
+          <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/MANNERS.jpg" /></div>
+          <div className={style2.aboutDetails}>
+            <p className={style2.aboutHeader}>CUSTOMS & MANNERS</p>
+              <p>Following a general travelers code of respect<br/>
+                for the people you meet and places you visit will<br/>
+                stand you in good stead.
+            </p>
+            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+              <Footer/> 
     </div>
   )
 }

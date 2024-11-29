@@ -5,7 +5,7 @@ const footer = () => {
     <div className={style.footerMainContainer}>
       <div className={style.footerContainer}>
         <section className={style.websiteTitleArea}>
-          <img src="/ASSETS/WEBSITE-TITLE.png" />
+          <img src="/LANDINGPAGEASSETS/favicon.png" />
           <p>Subscribe Now</p>
           <button className={style.websitetitlebutton}>Subscribe</button>
         </section>

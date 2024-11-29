@@ -200,6 +200,102 @@ export default function landingjavascipt() {
         observer1.observe(elements);
 
 
+       const show1 = document.getElementById('show1')
+        const observer2 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show1.classList.add(style.show1Display);
+                } else {
+                    show1.classList.remove(style.show1Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer2.observe(show1);
+
+        const show2 = document.getElementById('show2')
+        const observer3 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show2.classList.add(style.show2Display);
+                } else {
+                    show2.classList.remove(style.show2Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer3.observe(show2);
+
+         const show3 = document.getElementById('show3')
+        const observer4 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show3.classList.add(style.show3Display);
+                } else {
+                    show3.classList.remove(style.show3Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer4.observe(show3);
+
+             const show4 = document.getElementById('show4')
+        const observer5 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show4.classList.add(style.show4Display);
+                } else {
+                    show4.classList.remove(style.show4Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer5.observe(show4);
+
+       
+             const show5 = document.getElementById('show5')
+        const observer6 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show5.classList.add(style.show5Display);
+                } else {
+                    show5.classList.remove(style.show5Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer6.observe(show5);
+
+       
+             const show6 = document.getElementById('show6')
+        const observer7 = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    show6.classList.add(style.show6Display);
+                } else {
+                    show6.classList.remove(style.show6Display);
+                }
+            }, {
+                threshold: 1,
+            });
+        });
+        observer7.observe(show6);
+
+       
+       
+       
+
 
     })
     return (

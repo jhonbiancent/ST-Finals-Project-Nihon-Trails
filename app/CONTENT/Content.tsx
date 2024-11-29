@@ -149,7 +149,7 @@ const Content = () => {
         </p>
         <section className={style.exploreImage1} id="exploreImage">
           <section className={style.exploreImageContainer}>
-            <img src="/MUST-SEE/discover-page-explore-japan-image1.webp" />
+            <img src="/LANDINGPAGEASSETS/MT-FUJI.jpg" />
           </section>
         </section>
         <p className={style.paragraph2}>
