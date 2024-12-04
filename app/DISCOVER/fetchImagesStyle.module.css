@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   align-self: center;
-  padding-left: 5%;
+  padding-left: 10%;
   width: 90%;
   height: 55px;
   font-size: 8px;
@@ -24,7 +24,7 @@
   align-items: center;
   gap: 3%;
   height: 30px;
-  width: 27%;
+  width: 40%;
   margin-right: auto;
   background-color: rgb(139, 223, 188);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -32,6 +32,7 @@
   border: none;
   border-radius: 5px;
   transition: 0.2s ease-in-out;
+  font-size: 10px;
 }
 .addToBucketlistButton:hover {
   cursor: pointer;

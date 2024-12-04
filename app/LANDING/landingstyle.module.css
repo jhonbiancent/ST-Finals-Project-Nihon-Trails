@@ -365,3 +365,16 @@
 .show6Display {
   opacity: 1;
 }
+.discoverPageButton {
+  border: solid 2px white;
+  height: 10vh;
+  width: 15vw;
+  background-color: transparent;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  right: 5%;
+  bottom: 20%;
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.307);
+}

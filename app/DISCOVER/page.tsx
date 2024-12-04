@@ -29,7 +29,7 @@ import Readmore from './readMore';
     
     const [fetchedName, setFetchedName] = useState<string>("none");
     
-  const [displayMode, setDisplayMode] = useState<string>("hidden");    
+  const [displayMode, setDisplayMode] = useState<string>("scroll");    
 
 
   const language = "en";
@@ -93,7 +93,7 @@ import Readmore from './readMore';
   if (error) return <div>Error: {error}</div>;
 
     return (
-      <body>
+      <body id="body">
         <DiscoverPageScript/>
       <main>
 
@@ -109,7 +109,7 @@ import Readmore from './readMore';
 
         <section className={Style2.modalMainContainer} id="confirmationModalMainContainer">
           <div className={Style2.modalSucccessful} id="confirmationModal">
-          <p>Successfully added to Buckelist!</p>
+          <p>Successfully liked this place!</p>
             <button id="closeButton" className={Style2.closeButton}
             onClick={closeModal}
             >Close</button>
@@ -131,10 +131,11 @@ import Readmore from './readMore';
               </div>
             </div>
             <div className={Style.detailsContainer}>
-              <form className={Style.searchBarContainer}>
+               <div className={Style.searchBarContainer}>
                 <img src="/ICONS/ICON-SEARCH.png" className={Style.searchIconImage} />
                 <input type="search" placeholder='search' className={Style.searchBar}/>
-                <img src="/ICONS/ICON-FILTER.png" className={Style.iconFilter} />
+                  <img src="/ICONS/ICON-FILTER.png" className={Style.iconFilter} />
+                </div>
                 <section className={Style.categoryContainer}>
                   <div className={Style.categoryButtons} id="cameraIcon" onClick={()=> setPlaceCategories("tourism")} ><img src="/ICONS/ICON-CAMERA.png" /><p>Must See</p></div>
                   <div className={Style.categoryButtons} id="mountainIcon" onClick={()=> setPlaceCategories("natural.mountain")} ><img src="/ICONS/ICON-MOUNTAIN.png" /><p>Mountains</p></div>
@@ -145,13 +146,12 @@ import Readmore from './readMore';
                   <div className={Style.categoryButtons} id="naturalParkIcon" onClick={()=> setPlaceCategories("natural")} ><img src="/ICONS/ICON-NATURAL-PARK.png" /><p>Natural Parks</p></div>
                   <div className={Style.categoryButtons} id="transportIcon" onClick={()=> setPlaceCategories("public_transport")} ><img src="/ICONS/ICON-TRANSPORTATION.png" /><p>Transport</p></div>
                 </section>
-              </form>
+            
               <section className={Style.resultsContainer}>
-        
-                  <p>Current Location:</p>
+                  {/* <p>Current Location:</p>
                   <p>Longitude: {coordinates.lng}</p> 
-                  <p>Latitude: {coordinates.lat}</p>
-       
+                  <p>Latitude: {coordinates.lat}</p> */}
+  
               
 
 

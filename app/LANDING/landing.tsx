@@ -38,8 +38,11 @@ const landing = () => {
           <p className={style.thirdheader}>  <img src="/ICONS/ICON-LOCATION.png" className={style.locationicon} />
             Kenninji, Kyoto</p>  
         </div>
-
-
+{/* 
+        <button className={style.discoverPageButton}>
+          Discover More
+        </button> */}
+  
         <div className={style.introcarouselContainer}>
           <span className={style.aboutUsContainer}>
             <a href="#Learn" ><p>About</p></a>

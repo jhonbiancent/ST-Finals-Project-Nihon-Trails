@@ -107,16 +107,11 @@ const FetchImages: React.FC<FetchImagesProps> = ({
       ) : null}
 
       <div className={Style2.seeMoreContainer}>
-        <button
-          className={Style2.addToBucketlistButton}
-          id="addedToBucketlistButton"
-          onClick={showModal}
-        >
-          Add to Bucketlist
-        </button>
-        <button className={Style2.addToBucketlistButton}>
-          <img className={Style2.buttonIcons} src="ICONS/ICON-PINPOINT.svg" />
-          Pinpoint
+     
+        <button className={Style2.addToBucketlistButton} id="addedToBucketlistButton"
+          onClick={showModal}>
+          <img className={Style2.buttonIcons} src="ICONS/ICON-PINPOINT.svg"/>
+       Like 
         </button>
         <button
           className={Style2.addToBucketlistButton}

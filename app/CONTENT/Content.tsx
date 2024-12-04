@@ -30,7 +30,171 @@ const Content = () => {
                   <h4>Regions of Japan</h4>
         </section>
       </section>
-           <Javascript/>
+      <Javascript />
+
+      
+        <div className={style.modalOutsideBody} id="modalBody1">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton1">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-DAZAIFU-TENMANGU.webp" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>Kawachi Wisteria</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+           <div className={style.modalOutsideBody} id="modalBody2">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton2">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-KUMAMOTO-CASTLE.webp" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>Kyushu Kumamoto Forest</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+            <div className={style.modalOutsideBody} id="modalBody3">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton3">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-SHURIJO-CASTLE.jpg" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>SHURIJO SPRINGS</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+             <div className={style.modalOutsideBody} id="modalBody4">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton4">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-TAKACHIHO-GORGE.jpg" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>HIROSAKI CASTLE</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                 <div className={style.modalOutsideBody} id="modalBody5">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton5">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-YONOHA-MAEHAMA-BEACH.jpg" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>HIRAIZUMI SHRINE</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+        <div className={style.modalOutsideBody} id="modalBody6">
+        <div className={style.modalBody}>
+          <div className={style.modalRowExit}>
+            <button className={style.exitButton} id="modalExitButton6">X</button>
+          </div>
+              <div className={style.modalImage}>
+              <img src="/TOURISM/TOURISM-KYUSHU-BEPPU-JIGOKU.jpg" />
+                 <div className={style.modalContent}>
+              <div className={style.modalTitle}><p>MIYAJIMA SHRINES</p></div>
+              <p>&#127759; Wooded Hills South of Central Kitakyushu</p>
+              <div className={style.modaRlow}>
+                <p>&#x1F31F; Rating: 4</p>
+                <p>&#x1F31F; Ratings Count: 14</p>
+              </div>
+                  <p>&#x1F4DE; Contact: +81 288-51-0026</p>
+                <p>Information: </p>
+                <p>
+                  Kawachi Wisteria Garden (河内藤園, Kawachi Fujien) is a private garden in the wooded hills<br/>
+                  south of central Kitakyushu, famous for its spectacular displays of wisteria flowers. The garden<br/>
+                  is opened to the public seasonally during the wisteria season which usually peaks around late<br/>
+                  April to early May and during the maple leaf season in autumn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       <div className={style.regionMapandPicturesContainer}>
         {/* <div className={style.regionsContainer}>
@@ -73,21 +237,21 @@ const Content = () => {
               <span className={style.details} id="details1">
               <p className={style.placeTitle}>Kyushu</p>
               <p className={style.subTitle}>| Fujinomiya</p>
-                <button>
+                <button id="showModalButton1">
                   View
                 </button>
             </span>
               <span className={style.details} id="details2">
               <p className={style.placeTitle}>Kansai</p>
                <p className={style.subTitle}>| Honmaru</p>
-                <button>
+                <button id="showModalButton2">
                   View
                 </button>
             </span>
               <span className={style.details} id="details3">
               <p className={style.placeTitle}>Chubu</p>
                 <p className={style.subTitle}>|  Korankei</p>
-                <button>
+                <button id="showModalButton3">
                   View
                 </button>
               </span>
@@ -110,21 +274,21 @@ const Content = () => {
               <span className={style.details} id="details4">
               <p className={style.placeTitle}>Tohoku</p>
                 <p className={style.subTitle}>|  Aomori</p>
-                <button>
+                <button id="showModalButton4">
                   View
                 </button>
             </span>
               <span className={style.details} id="details5">
               <p className={style.placeTitle}>Hokkaido</p>
                <p className={style.subTitle}>|  Iwate</p>
-                <button>
+                <button id="showModalButton5">
                   View
                 </button>
             </span>
               <span className={style.details} id="details6">
               <p className={style.placeTitle}>Chugoku</p>
               <p className={style.subTitle}>|  Mikasa</p>
-                <button>
+                <button id="showModalButton6">
                   View
                 </button>
               </span>

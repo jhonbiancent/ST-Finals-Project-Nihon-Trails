@@ -5,6 +5,109 @@ import style from './content.module.css';
 export default function contentJavascript() {
     useEffect(() => {
 
+        const body = document.getElementById('body');
+        const showModalButton1 = document.getElementById('showModalButton1');
+        const showModalButton2 = document.getElementById('showModalButton2');
+        const showModalButton3 = document.getElementById('showModalButton3');
+        const showModalButton4 = document.getElementById('showModalButton4');
+        const showModalButton5 = document.getElementById('showModalButton5');
+         const showModalButton6 = document.getElementById('showModalButton6');
+
+        const modalBody1 = document.getElementById('modalBody1');
+        const modalBody2 = document.getElementById('modalBody2');
+        const modalBody3 = document.getElementById('modalBody3');
+        const modalBody4 = document.getElementById('modalBody4');
+        const modalBody5 = document.getElementById('modalBody5');
+        const modalBody6 = document.getElementById('modalBody6');
+        
+        const modalExitButton1 = document.getElementById('modalExitButton1');
+        const modalExitButton2 = document.getElementById('modalExitButton2');
+        const modalExitButton3 = document.getElementById('modalExitButton3');
+        const modalExitButton4 = document.getElementById('modalExitButton4');
+        const modalExitButton5 = document.getElementById('modalExitButton5');
+        const modalExitButton6 = document.getElementById('modalExitButton6');
+        
+        showModalButton1.onclick = function(){
+            modalBody1.style.display = 'flex';
+            body.style.overflowY = 'hidden';
+        }
+        modalExitButton1.onclick = function () {
+            modalBody1.style.display = 'none';
+                   body.style.overflowY = 'scroll';
+        }
+        modalBody1.onclick = function () {
+            modalBody1.style.display = 'none';
+             body.style.overflowY = 'scroll';
+        }
+           
+        showModalButton2.onclick = function(){
+            modalBody2.style.display = 'flex';
+               body.style.overflowY = 'hidden';
+        }
+        modalExitButton2.onclick = function () {
+            modalBody2.style.display = 'none';
+                  body.style.overflowY = 'scroll';
+        }
+        modalBody2.onclick = function () {
+            modalBody2.style.display = 'none';
+                  body.style.overflowY = 'scroll';
+        }
+
+                 
+        showModalButton3.onclick = function(){
+            modalBody3.style.display = 'flex';
+               body.style.overflowY = 'hidden';
+        }
+        modalExitButton3.onclick = function () {
+            modalBody3.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+        modalBody3.onclick = function () {
+            modalBody3.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+
+                     
+        showModalButton4.onclick = function(){
+            modalBody4.style.display = 'flex';
+               body.style.overflowY = 'hidden';
+        }
+        modalExitButton4.onclick = function () {
+            modalBody4.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+        modalBody4.onclick = function () {
+            modalBody4.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+
+                     
+        showModalButton5.onclick = function(){
+            modalBody5.style.display = 'flex';
+               body.style.overflowY = 'hidden';
+        }
+        modalExitButton5.onclick = function () {
+            modalBody5.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+        modalBody5.onclick = function () {
+            modalBody5.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+             
+        showModalButton6.onclick = function(){
+            modalBody6.style.display = 'flex';
+               body.style.overflowY = 'hidden';
+        }
+        modalExitButton6.onclick = function () {
+            modalBody6.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+        modalBody6.onclick = function () {
+            modalBody6.style.display = 'none';
+                body.style.overflowY = 'scroll';
+        }
+
         const elements = document.getElementById('element1')
         const observer1 = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
