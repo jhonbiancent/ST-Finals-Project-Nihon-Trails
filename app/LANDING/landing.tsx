@@ -153,7 +153,7 @@ const landing = () => {
               English is generally understood in major cities<br/>
               and designated tourist sites.
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+           <a href="https://www.japan-guide.com/e/e621.html"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a> 
           </div>
           </div>
 
@@ -165,15 +165,13 @@ const landing = () => {
                 no daylight saving is practiced. The country is<br/>
                 nine hours ahead of GMT.
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+            <a href="https://time.is/Japan"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a>
           </div>
           </div>
 
         </div>
         
-   
         <div className={style2.aboutRow}>
-
           <div className={style2.aboutColumn}>
           <div className={style2.aboutImage}><img src="/LANDINGPAGEASSETS/TIMEZONE.jpg" /></div>
           <div className={style2.aboutDetails}>
@@ -182,7 +180,7 @@ const landing = () => {
                 cities in Japan, so you should never be too far<br/>
                 from a Wi-Fi connection.
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+            <a href="https://www.japan-guide.com/e/e2279.html"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a>
           </div>
           </div>
 
@@ -195,7 +193,7 @@ const landing = () => {
                 necessities, purchase a plug adapter<br/>
                 beforehand.
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+            <a href="https://www.japan-guide.com/e/e2225.html"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a>
           </div>
           </div>
 
@@ -209,7 +207,7 @@ const landing = () => {
                 country and you can exchange foreign currency<br/>
                 at the airports and most major banks
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+           <a href="https://www.japan-guide.com/e/e2196.html"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a>
           </div>
           </div>
 
@@ -221,7 +219,7 @@ const landing = () => {
                 for the people you meet and places you visit will<br/>
                 stand you in good stead.
             </p>
-            <p className={style2.aboutLearnMore}>Learn More &#10095;</p>
+            <a href="https://www.japan.travel/en/guide/understanding-and-mastering-japanese-manners-and-etiquette/"><p className={style2.aboutLearnMore}>Learn More &#10095;</p></a>
             </div> 
           </div>
         </div>

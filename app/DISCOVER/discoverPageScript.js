@@ -5,6 +5,8 @@ import Style from './discoverPage.module.css';
 export default function discoverPageScript() {
     useEffect(() => {
 
+        
+
         const cameraIcon = document.getElementById('cameraIcon');
         const mountainIcon = document.getElementById('mountainIcon');
         const shrineIcon = document.getElementById('shrineIcon');
@@ -13,8 +15,7 @@ export default function discoverPageScript() {
         const transportIcon = document.getElementById('transportIcon');
     
 
-        const CloseButtonExpandedSection = document.getElementById('closeButtonExpandedSection');
-        const expandedResultsContainer = document.getElementById('expandedResultsContainer');
+
 
         var cameraClicked = false; 
         var mountainClicked = false; 
@@ -23,6 +24,9 @@ export default function discoverPageScript() {
         var naturalParkClicked = false; 
         var transportClicked = false; 
         
+
+
+
         cameraIcon.onclick = function () {
             cameraClicked = !cameraClicked;
             if (cameraClicked) {

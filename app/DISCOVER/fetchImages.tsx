@@ -3,9 +3,8 @@ import React, { useState } from "react";
   import Style from "./discoverPage.module.css";
   import Style2 from "./fetchImagesStyle.module.css";
   import DiscoverPageScript from './discoverPageScript'; 
-  import { showModal } from "./discoverPageScript";
-import { openReadmoreSection } from "./discoverPageScript";
-
+import { showModal } from "./discoverPageScript";
+import ReadMore from './readMore';
 
   interface FetchImagesProps {
     placeName: string; // Accept placeName as a prop
@@ -16,6 +15,13 @@ import { openReadmoreSection } from "./discoverPageScript";
     const [imageUrls, setImageUrls] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
     const [addedToBucketlist, setBucketlist] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean | null>(null);
+    const [selectedPlace, setSelectedPlace] = useState<{ name: string } | null>(null); // To track the selected place for ReadMore
+
+
+
+          const handleReadMore = () => {
+    setSelectedPlace({ name: placeName }); // Pass the place name to the ReadMore component
+  };
 
     var imageToBeFetched = placeName;
     const fetchImage = async () => {
@@ -56,17 +62,19 @@ import { openReadmoreSection } from "./discoverPageScript";
 
     const prevImage = () => {
       if (currentIndex > 0) {
-
-
         setCurrentIndex(currentIndex - 1);
       }
 
+  
     };
 
     return (
       <div className={Style2.resultsContainer}>
         <DiscoverPageScript />
-  
+        {(selectedPlace ? (
+        // Render ReadMore component when selectedPlace is set
+        <ReadMore placeName={selectedPlace.name} />
+      ) : <>
           {placeName.length > 0 ? (
           <div className={Style2.resultSubContainer}>
           <div className={Style.carouselContainer}>
@@ -96,7 +104,7 @@ import { openReadmoreSection } from "./discoverPageScript";
               </section>
                 </>)}
               
-            <button className={Style.nextButton} onClick={nextImage} >
+                <button className={Style.nextButton} onClick={nextImage} >
               &#10095;
             </button>
             </div> 
@@ -125,11 +133,13 @@ import { openReadmoreSection } from "./discoverPageScript";
              <img className={Style2.buttonIcons} src="ICONS/ICON-PINPOINT.svg"/>
             Pinpoint
           </button>
-          <button className={Style2.addToBucketlistButton}>
+          <button className={Style2.addToBucketlistButton} id="readMoreButton" onClick={handleReadMore}>
             <img className={Style2.buttonIcons} src="ICONS/ICON-SEE-MORE.svg" />
             Read More      
           </button>
-        </div>
+          </div>
+          </>)
+        }
       </div>
     );
   };

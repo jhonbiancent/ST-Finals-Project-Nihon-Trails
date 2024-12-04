@@ -4,14 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  background-color: rgb(139, 223, 188);
+  background-color: rgba(139, 223, 188, 0.677);
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 10vh;
-  z-index: 11;
+  z-index: 2;
   top: 0;
 }
 .navigationBar {
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +43,6 @@
   position: absolute;
   left: 3%;
   width: 7%;
-  z-index: 10;
+  z-index: 2;
   top: 2%;
 }

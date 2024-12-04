@@ -10,6 +10,7 @@ import DiscoverPageScript from './discoverPageScript';
 import { closeModal } from './discoverPageScript';
 import { CloseExpandedSection } from './discoverPageScript';
 import Content from '../CONTENT/Content';
+import Readmore from './readMore';
 
 
  interface FetchDataFromImagesPage {
@@ -24,7 +25,10 @@ import Content from '../CONTENT/Content';
   const [placeName, setPlaceName] = useState<string | null>(null);
   const [requestImageBool, setRequestImageBool] = useState<boolean | false>(false);
   const [placeCategories, setPlaceCategories] = useState<string>("tourism");
-  const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
+    const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
+    
+
+
   const language = "en";
   const proximitySearch = 30000;  
   const limitOfRequestedPlaces = 30;
@@ -76,6 +80,8 @@ import Content from '../CONTENT/Content';
           <h2 className={Style.placesName}></h2>
         </section>
 
+
+
         <section className={Style2.modalMainContainer} id="confirmationModalMainContainer">
           <div className={Style2.modalSucccessful} id="confirmationModal">
           <p>Successfully added to Buckelist!</p>
@@ -85,6 +91,8 @@ import Content from '../CONTENT/Content';
           </div>
         </section>
 
+        
+       
         <NavBar />
         <div className={Style.mainContainer}>
           <section className={Style.contentContainer}>
@@ -104,7 +112,7 @@ import Content from '../CONTENT/Content';
                 <img src="/ICONS/ICON-FILTER.png" className={Style.iconFilter} />
                 <section className={Style.categoryContainer}>
                   <div className={Style.categoryButtons} id="cameraIcon" onClick={()=> setPlaceCategories("tourism")} ><img src="/ICONS/ICON-CAMERA.png" /><p>Must See</p></div>
-                  <div className={Style.categoryButtons} id="mountainIcon" onClick={()=> setPlaceCategories("mountain")} ><img src="/ICONS/ICON-MOUNTAIN.png" /><p>Mountains</p></div>
+                  <div className={Style.categoryButtons} id="mountainIcon" onClick={()=> setPlaceCategories("natural.mountain")} ><img src="/ICONS/ICON-MOUNTAIN.png" /><p>Mountains</p></div>
                   <div className={Style.categoryButtons} id="shrineIcon" onClick={()=> setPlaceCategories("religion.place_of_worship.shinto")} ><img src="/ICONS/ICON-SHRINES.png" /><p>Shrines</p></div>
                 </section>
                 <section className={Style.categoryContainer2}>
