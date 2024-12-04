@@ -1,6 +1,7 @@
 .main {
   height: 650vh;
   position: relative;
+  scroll-behavior: smooth;
 }
 .introductionImagesContainer {
   height: 100vh;

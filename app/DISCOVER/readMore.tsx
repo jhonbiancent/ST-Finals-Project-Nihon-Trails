@@ -3,9 +3,10 @@ import style from './readMore.module.css';
 import Script from './discoverPageScript'
 interface ReadMoreProps {
   placeName: string; // Accept placeName as a prop
+  sendData: (data: boolean) => void;
 }
 
-const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
+const ReadMore: React.FC<ReadMoreProps> = ({ placeName,sendData }) => {
   const [currentPlaceName, setCurrentPlaceName] = useState<string | null>(placeName);
   const [imageUrls, setImageUrls] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
   const [loading, setLoading] = useState<boolean | null>(null);
@@ -22,6 +23,13 @@ const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
   const [openingHours, setOpeningHours] = useState<string | null>(null);
   const [phone, setPhone] = useState<string | null>(null);
   const [website, setWebsite] = useState<string | null>(null);
+
+  const [modalOff, setModalOff] = useState<boolean>(false);
+
+  const offModal = ()=>{
+    setModalOff(false);
+    sendData(modalOff);
+  }
 
   var imageToBeFetched = placeName;
   const fetchSearchData = async () => {
@@ -69,7 +77,7 @@ const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
       setKnowledgeGraph(knowledge);
     } catch (error) {
       console.error("Error fetching search data:", error);
-      setOrganicSnippet("Error fetching snippet.");
+      setOrganicSnippet("no description available.");
       setKnowledgeGraph(null);
     }
   };
@@ -126,10 +134,10 @@ const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
   return (
     <div>
       <Script/>
-      <div className={style.readMoreBody} id="modal">
+      <div className={style.readMoreBody}>
         <div className={style.modalBody}>
           <div className={style.closeRow}>
-            <button className={style.closeButton} id="closeButton">X</button>
+            <button className={style.closeButton} id="closeButton" onClick={()=> sendData(false)}>X</button>
           </div>
       
 
@@ -163,9 +171,11 @@ const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
               &#10095;
             </button>
             </div>
-     <div className={style.fetchedData}>    
+          <div className={style.fetchedData}>       
             <p className={style.title}>{currentPlaceName}</p> 
+
             <div className={style.addressRow}>{ placeAddress? ( <p className={style.address}>&#127759;   {placeAddress}</p>) : (<></>)}</div>
+      {knowledgeGraph?( <>
             <div className={style.ratingsRow}>
               {rating ? (<>  <p className={style.address}>&#x1F31F; Ratings: {rating}</p>  <p className={style.address}>&#x1F31F; Rating Counts: {ratingCount}</p></>
               ) : (<></>)}
@@ -173,12 +183,18 @@ const ReadMore: React.FC<ReadMoreProps> = ({ placeName }) => {
             {openingHours ? (<p className={style.address}> &#128336; Opening Hours:  {openingHours}</p>) : (<></>)}
             {phone ? (<p className={style.address}>  &#x1F4DE; Contact:  {phone}</p>):(<></>)}
             {website ? (<p className={style.address}>  &#128187; Website:  {website}</p>) : (<></>)}
+            </>) : (<>
+                <p>No Booking location information available...</p>
+            </>)
+            }
             <div className={style.Spacer}>Information:</div>
-            <p>&#x25A1; {placeType || "Loading place description..."}</p>
-            <p>&#x25A1; {organicSnippet || "Loading place description..."}</p>
-            <p>&#x25A1; {organicSnippet2 || "Loading place description..."}</p>
-            <p>&#x25A1; {organicSnippet3 || "Loading place description..."}</p>
-              <p>&#x25A1; {organicSnippet4 || "Loading place description..."}</p>
+            <p>&#x1F4CD; {placeType || "No place description..."}</p>
+
+            <div className={style.Spacer}>Additional Information:</div>
+            <p>&#x1F4CD; {organicSnippet || "Loading place description..."}</p>
+            <p>&#x1F4CD; {organicSnippet2 || "Loading place description..."}</p>
+            <p>&#x1F4CD;{organicSnippet3 || "Loading place description..."}</p>
+              <p>&#x1F4CD; {organicSnippet4 || "Loading place description..."}</p>
         </div> 
         </div>
       </div>

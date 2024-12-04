@@ -42,7 +42,7 @@ const landing = () => {
 
         <div className={style.introcarouselContainer}>
           <span className={style.aboutUsContainer}>
-            <p>About</p>
+            <a href="#Learn" ><p>About</p></a>
             <p>Best Spots In Japan</p>
           </span>
           <section className={style.carouselImagesContainer}>
@@ -142,7 +142,7 @@ const landing = () => {
       </div>
 
 
-      <div className={style2.aboutJapan}>
+      <div className={style2.aboutJapan} id="Learn">
         <div className={style2.aboutRow}>
 
         <div className={style2.aboutColumn}>

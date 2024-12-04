@@ -15,18 +15,21 @@ import Readmore from './readMore';
 
  interface FetchDataFromImagesPage {
     placeNameEnglish: string;
-    imageUrls: String[];
   }
-  const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, imageUrls}) => {
+  const DiscoverPage: React.FC<FetchDataFromImagesPage> = ({placeNameEnglish, }) => {
   const [coordinates, setCoordinates] = useState<{ lng: number; lat: number }>({ lng: 0, lat: 0 });
   const [places, setPlaces] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [placeName, setPlaceName] = useState<string | null>(null);
-  const [requestImageBool, setRequestImageBool] = useState<boolean | false>(false);
+  const [requestImageBool, setRequestImageBool] = useState<boolean | false>(true);
   const [placeCategories, setPlaceCategories] = useState<string>("tourism");
-    const [fetchedImageURLS, setFetchedImageURLS] = useState<string[]>(["ICONS/ICON-IMAGE.png"]);
     
+    const [modalIsOn, setModalisOn] = useState<boolean>(false);
+    
+    const [fetchedName, setFetchedName] = useState<string>("none");
+    
+  const [displayMode, setDisplayMode] = useState<string>("hidden");    
 
 
   const language = "en";
@@ -42,6 +45,26 @@ import Readmore from './readMore';
   };
 
 
+    const handleImageData = (data: any) => {
+      if (data == false) {
+         console.log("modal should be off");
+        setModalisOn(false);
+        setDisplayMode("scroll");
+      }
+      else {
+      setFetchedName(data);
+      console.log("Image data received:" + fetchedName);
+      setModalisOn(true);
+      console.log("modal should be on");
+      setDisplayMode("hidden");
+      }
+    };
+
+    
+    const modalOff = (data : boolean) => {
+       setModalisOn(true);
+        console.log("modal should be off");
+    }
   const getPlaces = async (lng: number, lat: number) => {
     setLoading(true);
     const { data, error } = await fetchPlaces(
@@ -62,13 +85,15 @@ import Readmore from './readMore';
     };
     
   useEffect(() => {
-    getPlaces(coordinates.lng, coordinates.lat);
-  }, []);
+
+    document.body.style.overflowY = displayMode;
+  
+  }, [displayMode]);
   // if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  return (
-    <body>
+    return (
+      <body>
         <DiscoverPageScript/>
       <main>
 
@@ -91,7 +116,7 @@ import Readmore from './readMore';
           </div>
         </section>
 
-        
+          {(modalIsOn ? (<Readmore placeName={fetchedName} sendData={handleImageData} />) : (<></>))}
        
         <NavBar />
         <div className={Style.mainContainer}>
@@ -146,7 +171,7 @@ import Readmore from './readMore';
                           <div className={Style2.resultsImagesContainer} key={index}>
                             <p className={Style.placesName}>{placeIndex++}. {place.properties.address_line1}</p> 
                             <div>
-                              <FetchImages placeName={place.properties.name} isImageRequested={requestImageBool} placeNameEnglish={place.properties.address_line1} />
+                              <FetchImages placeName={place.properties.name} isImageRequested={requestImageBool} placeNameEnglish={place.properties.address_line1} onSendData={handleImageData } />
                               
                               
                               {/* <button className={Style.fetchImageButton} onClick={() => {
